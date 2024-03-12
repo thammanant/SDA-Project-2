@@ -1,16 +1,15 @@
-import java.util.ArrayList;
+
 
 public abstract class TheMeal {
-    private ArrayList<String> dishes = new ArrayList<>();
+    
+    protected String dishes;
 
 
     
-    public abstract void setDishes(ArrayList<String> dishes);
+    public abstract void setDishes(String dish);
 
-    public void toStrings() {
-        for (String dish : dishes) {
-            System.out.println(dish);
-        }
+    public String toString() {
+        return "Dishes: " + dishes;
     }
      
 }
