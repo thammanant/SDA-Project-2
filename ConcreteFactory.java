@@ -1,19 +1,26 @@
 public class ConcreteFactory extends CourseFactory {
 
-    public Course createMeal(String CourseType) {
-        if (CourseType.equals("Breakfast")) {
-            return new Breakfast(this);
-        } else if (CourseType.equals("Lunch")) {
-            return new Lunch(this);
-        } else if (CourseType.equals("Dinner")) {
-            return new Dinner(this);
-        } else {
-            throw new IllegalArgumentException("Invalid Course Type");
+    @Override
+    public MealBuilder createMealBuilder(String CourseType) {
+        switch (CourseType) {
+            case "FullEnglish":
+                return new FullEnglish();
+            case "LightFare":
+                return new LightFare();
+            case "SingleDish":
+                return new SingleDish();
+            case "TwoCourse":
+                return new TwoCourse();
+            case "DinnerAppetiser":
+                return new DinnerAppetiser();
+            default:
+                throw new IllegalArgumentException("Invalid Course Type");
         }
+        // TODO: Think about Dinner
     }
 
     @Override
-    Beverage createBeverage(String type) {
+    public Beverage createBeverage(String type) {
         if (type.equals("Coffee")) {
             return new Coffee();
         } else if (type.equals("Tea")) {

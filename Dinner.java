@@ -5,8 +5,8 @@ public class Dinner extends Course{
         this.courseFactory = courseFactory;
     }
 
-    void prepare() {
-        meal = courseFactory.createMeal("Dinner");
-        beverage = courseFactory.createBeverage();
+    void prepare(String courseType, String beverageType) {
+        mealBuilder = courseFactory.createMealBuilder(courseType);
+        courseFactory.createBeverage(beverageType);
     }
 }
