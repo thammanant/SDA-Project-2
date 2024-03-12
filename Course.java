@@ -1,6 +1,6 @@
 public abstract class Course {
-    private MealBuilder mealBuilder;
-    private Beverage beverage;
+    MealBuilder mealBuilder;
+    Beverage beverage;
 
     public void setMealBuilder(MealBuilder mealBuilder) {
         this.mealBuilder = mealBuilder;
@@ -14,5 +14,9 @@ public abstract class Course {
         return beverage;
     }
 
-    abstract void prepare();
+    abstract void prepare(String beverageType);
+
+    public String toString() {
+        return "Beverage: " + beverage;
+    }
 }
