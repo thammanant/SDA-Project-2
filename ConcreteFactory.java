@@ -1,17 +1,22 @@
 public class ConcreteFactory extends CourseFactory {
 
     @Override
-    public Course createMeal(String CourseType) {
+    public MealBuilder createMealBuilder(String CourseType) {
         switch (CourseType) {
-            case "Breakfast":
-                return new Breakfast(this);
-            case "Lunch":
-                return new Lunch(this);
-            case "Dinner":
-                return new Dinner(this);
+            case "FullEnglish":
+                return new FullEnglish();
+            case "LightFare":
+                return new LightFare();
+            case "SingleDish":
+                return new SingleDish();
+            case "TwoCourse":
+                return new TwoCourse();
+            case "DinnerAppetiser":
+                return new DinnerAppetiser();
             default:
                 throw new IllegalArgumentException("Invalid Course Type");
         }
+        // TODO: Think about Dinner
     }
 
     @Override
