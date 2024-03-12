@@ -1,6 +1,10 @@
 import java.util.Observable;
 
 public class ConcreteStore extends Store{
+    public ConcreteStore(CourseFactory courseFactory) {
+        super(courseFactory);
+    }
+
     protected Course createCourse(String item) {
         Course course = null;
         CourseFactory courseFactory = new ConcreteFactory();
@@ -21,6 +25,6 @@ public class ConcreteStore extends Store{
 
     @Override
     public void update(Observable o, Object arg) {
-
+        super.update(o, arg);
     }
 }
