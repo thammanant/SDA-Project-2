@@ -23,7 +23,7 @@ public abstract class MealBuilder {
         //implement later (input parts) must have condition statement for checking which one to create
     }
 
-    public abstract void buildDish();
+    public abstract void buildDish(String dish);
 
         
 }

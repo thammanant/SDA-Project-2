@@ -1,11 +1,11 @@
-import java.util.ArrayList;
+
 
 public class BreakfastProduct extends TheMeal{
 
 
     @Override
-    public void setDishes(ArrayList<String> dishes) {
-        
+    public void setDishes(String dishes) {
+        this.dishes = dishes;
         
     }
     
