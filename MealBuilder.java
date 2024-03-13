@@ -3,6 +3,8 @@ public abstract class MealBuilder {
     DinnerProduct dinnerProduct;
     LunchProduct lunchProduct;
 
+    Menu menu = new Menu();
+
 
     public BreakfastProduct getBreakfastProduct(){
         return breakfastProduct;

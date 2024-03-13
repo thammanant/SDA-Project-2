@@ -10,7 +10,7 @@ public class Lunch extends Course{
 
         String[] option = options.split(",");
 
-        if (category.equals("TwoCourseMeal")) {
+        if (category.equals("TwoCourse")) {
             mealBuilder.buildAppetizer(option[0]);
             mealBuilder.buildMainDish(option[1]);
         } else if (category.equals("SingleDish")) {
@@ -25,7 +25,6 @@ public class Lunch extends Course{
     public void prepare(String courseType,String options, String beverageType) {
         constructMeal(courseType, options);
         meal = getMeal();
-        System.out.println("Preparing " + meal);
         beverage = courseFactory.createBeverage(beverageType);
     }
 }
