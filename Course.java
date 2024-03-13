@@ -14,7 +14,7 @@ public abstract class Course {
         return beverage;
     }
 
-    abstract void prepare(String courseType, String beverageType);
+    abstract void prepare(String courseType, String options, String beverageType);
 
     public String toString() {
         return "Beverage: " + beverage;

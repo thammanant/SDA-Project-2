@@ -4,17 +4,19 @@ public abstract class CourseFactory extends Observable {
     public abstract MealBuilder createMealBuilder(String CourseType);
     public abstract Beverage createBeverage(String type);
 
-    public void setData(String CourseType, String BeverageType) {
+    public void setData(String CourseType, String Options, String BeverageType) {
         setChanged();
-        notifyObservers(new CourseData(CourseType, BeverageType));
+        notifyObservers(new CourseData(CourseType, Options, BeverageType));
     }
 
-    public class CourseData {
+    public static class CourseData {
         private final String CourseType;
+        private final String Options;
         private final String BeverageType;
 
-        public CourseData(String CourseType, String BeverageType) {
+        public CourseData(String CourseType, String Options, String BeverageType) {
             this.CourseType = CourseType;
+            this.Options = Options;
             this.BeverageType = BeverageType;
         }
 
@@ -22,8 +24,8 @@ public abstract class CourseFactory extends Observable {
             return CourseType;
         }
 
-        public String getBeverageType() {
-            return BeverageType;
-        }
+        public String getBeverageType() { return BeverageType; }
+
+        public String getOptions() { return Options; }
     }
 }

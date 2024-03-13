@@ -16,7 +16,7 @@ public abstract class Store implements Observer {
     public void update(Observable o, Object arg) {
         if (arg instanceof CourseFactory.CourseData) {
             CourseFactory.CourseData courseData = (CourseFactory.CourseData) arg;
-            System.out.println("Received update: CourseType = " + courseData.getCourseType() + ", BeverageType = " + courseData.getBeverageType());
+            System.out.println("Received update: CourseType = " + courseData.getCourseType() + ", Options =" + courseData.getOptions() + "BeverageType = " + courseData.getBeverageType());
         }
     }
 }

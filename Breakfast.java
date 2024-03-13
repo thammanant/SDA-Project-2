@@ -1,8 +1,10 @@
 public class Breakfast extends Course{
     CourseFactory courseFactory;
+
+    TheMeal meal;
+
     BreakfastBuilder mealBuilder = new BreakfastBuilder();
 
-   
 
     public TheMeal getMeal() {
         return mealBuilder.getBreakfastProduct();
@@ -18,14 +20,14 @@ public class Breakfast extends Course{
         }
     }
 
-   
-
     public Breakfast(CourseFactory courseFactory) {
         this.courseFactory = courseFactory;
     }
 
-    void prepare(String courseType, String beverageType) {
-        // mealBuilder = courseFactory.createMealBuilder(courseType);
+    void prepare(String courseType, String options, String beverageType) {
+        constructMeal(courseType, options);
+        meal = getMeal();
+        System.out.println("Preparing " + meal);
         beverage = courseFactory.createBeverage(beverageType);
     }
 }

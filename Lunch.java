@@ -1,5 +1,7 @@
 public class Lunch extends Course{
     CourseFactory courseFactory;
+    TheMeal meal;
+
     LunchBuilder mealBuilder = new LunchBuilder();
     
     public TheMeal getMeal() {
@@ -9,10 +11,11 @@ public class Lunch extends Course{
     public void constructMeal(String category, String options){
         mealBuilder.createNewMeal("2");
 
-        if (category.equals("MainDish")) {
-            mealBuilder.buildMainDish(options);
-        } else if (category.equals("Appetizer")) {
-            mealBuilder.buildAppetizer(options);
+        String[] option = options.split(",");
+
+        if (category.equals("TwoCourseMeal")) {
+            mealBuilder.buildAppetizer(option[0]);
+            mealBuilder.buildMainDish(option[1]);
         } else if (category.equals("SingleDish")) {
             mealBuilder.buildSingleDish(options);
         }
@@ -22,8 +25,10 @@ public class Lunch extends Course{
         this.courseFactory = courseFactory;
     }
 
-    void prepare(String courseType, String beverageType) {
-        // mealBuilder = courseFactory.createMealBuilder(courseType);
-        courseFactory.createBeverage(beverageType);
+    void prepare(String courseType,String options, String beverageType) {
+        constructMeal(courseType, options);
+        meal = getMeal();
+        System.out.println("Preparing " + meal);
+        beverage = courseFactory.createBeverage(beverageType);
     }
 }

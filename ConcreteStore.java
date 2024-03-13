@@ -23,6 +23,12 @@ public class ConcreteStore extends Store{
         return course;
     }
 
+    public Course orderCourse(String course, String courseType, String options, String beverageType) {
+        Course set = createCourse(course);
+        set.prepare(courseType, options, beverageType);
+        return set;
+    }
+
     @Override
     public void update(Observable o, Object arg) {
         super.update(o, arg);
