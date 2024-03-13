@@ -15,7 +15,7 @@ public class LunchBuilder extends MealBuilder{
     }
 
     public void buildMainDish (String dish){
-        this.lunchDish = this.lunchDish + (String) ((List<Object>) lunchMenu.get(1).get(2)).get(Integer.parseInt(dish) - 1);
+        this.lunchDish = this.lunchDish + ((List<Object>) lunchMenu.get(1).get(2)).get(Integer.parseInt(dish) - 1);
         buildDish(lunchDish);
     }
 

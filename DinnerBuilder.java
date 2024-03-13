@@ -10,12 +10,12 @@ public class DinnerBuilder extends MealBuilder{
     }
 
     public void buildMainDish(String dish){
-        this.dinnerDish = this.dinnerDish + (String) ((List<Object>) dinnerMenu.get(0).get(2)).get(Integer.parseInt(dish) - 1);
+        this.dinnerDish = this.dinnerDish + ((List<Object>) dinnerMenu.get(0).get(2)).get(Integer.parseInt(dish) - 1);
         buildDish(dinnerDish);
     }
 
     public void buildDessert(String dish){
-        this.dinnerDish = this.dinnerDish + (String) ((List<Object>) dinnerMenu.get(0).get(3)).get(Integer.parseInt(dish) - 1);
+        this.dinnerDish = this.dinnerDish + ((List<Object>) dinnerMenu.get(0).get(3)).get(Integer.parseInt(dish) - 1);
         buildDish(dinnerDish);
     }
 

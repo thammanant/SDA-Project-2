@@ -10,7 +10,7 @@ public class Lunch extends Course{
 
         String[] option = options.split(",");
 
-        if (category.equals("TwoCourseMeal")) {
+        if (category.equals("TwoCourse")) {
             mealBuilder.buildAppetizer(option[0]);
             mealBuilder.buildMainDish(option[1]);
         } else if (category.equals("SingleDish")) {

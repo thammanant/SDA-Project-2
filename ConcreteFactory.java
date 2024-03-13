@@ -5,6 +5,8 @@ public class ConcreteFactory extends CourseFactory {
             return new Coffee();
         } else if (type.equals("Tea")) {
             return new Tea();
+        } else if (type.equals("Juice")) {
+            return new Juice();
         }else {
             throw new IllegalArgumentException("Invalid Beverage Type");
         }
