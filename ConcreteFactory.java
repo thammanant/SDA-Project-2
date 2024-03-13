@@ -1,5 +1,4 @@
 public class ConcreteFactory extends CourseFactory {
-
     @Override
     public Beverage createBeverage(String type) {
         if (type.equals("Coffee")) {

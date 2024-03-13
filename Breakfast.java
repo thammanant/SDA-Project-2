@@ -22,7 +22,6 @@ public class Breakfast extends Course{
     public void prepare(String courseType, String options, String beverageType) {
         constructMeal(courseType, options);
         meal = getMeal();
-        System.out.println("Preparing " + meal);
         beverage = courseFactory.createBeverage(beverageType);
     }
 }
