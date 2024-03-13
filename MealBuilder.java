@@ -19,8 +19,21 @@ public abstract class MealBuilder {
     }
     
 
-    public void createNewMeal(){
+    public void createNewMeal(String mealType){
         //implement later (input parts) must have condition statement for checking which one to create
+        switch (mealType) {
+            case "1":
+                breakfastProduct = new BreakfastProduct();
+                break;
+            case "2":
+                lunchProduct = new LunchProduct();
+                break;
+            case "3":
+                dinnerProduct = new DinnerProduct();
+                break;
+            default:
+                break;
+        }
     }
 
     public abstract void buildDish(String dish);
