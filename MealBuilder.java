@@ -1,5 +1,4 @@
 public abstract class MealBuilder {
-    
     BreakfastProduct breakfastProduct;
     DinnerProduct dinnerProduct;
     LunchProduct lunchProduct;
@@ -7,7 +6,6 @@ public abstract class MealBuilder {
 
     public BreakfastProduct getBreakfastProduct(){
         return breakfastProduct;
-    
     }
 
     public DinnerProduct getDinnerProduct(){
@@ -20,7 +18,6 @@ public abstract class MealBuilder {
     
 
     public void createNewMeal(String mealType){
-        //implement later (input parts) must have condition statement for checking which one to create
         switch (mealType) {
             case "1":
                 breakfastProduct = new BreakfastProduct();
@@ -37,6 +34,4 @@ public abstract class MealBuilder {
     }
 
     public abstract void buildDish(String dish);
-
-        
 }
