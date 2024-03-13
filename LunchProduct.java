@@ -1,7 +1,4 @@
-
-
 public class LunchProduct extends TheMeal{
-
 
     @Override
     public void setDishes(String dishes) {

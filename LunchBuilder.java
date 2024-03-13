@@ -12,7 +12,7 @@ public class LunchBuilder extends MealBuilder{
                 break;
 
             case "3":
-                this.lunchDish = "Salmon Nicoise Salad:** Seared salmon fillet served on a bed of mixed greens with sliced hard-boiled egg, Nicoise olives, cherry tomatoes, and a wedge of lemon. Dressed with a light and lemony vinaigrette.";
+                this.lunchDish = "Salmon Nicoise Salad: Seared salmon fillet served on a bed of mixed greens with sliced hard-boiled egg, Nicoise olives, cherry tomatoes, and a wedge of lemon. Dressed with a light and lemony vinaigrette.";
                 break;
         
             default:
@@ -25,13 +25,13 @@ public class LunchBuilder extends MealBuilder{
     public void buildAppetizer (String dish){
         switch (dish) {
             case "1":
-                this.lunchDish = "Caprese Skewers with Balsamic Glaze- Bite-sized mozzarella balls, cherry tomatoes, and fresh basil leaves  skewered together and drizzled with a sweet and tangy balsamic glaze. Light and refreshing to start your lunch.\n";
+                this.lunchDish = "Caprese Skewers with Balsamic Glaze: Bite-sized mozzarella balls, cherry tomatoes, and fresh basil leaves  skewered together and drizzled with a sweet and tangy balsamic glaze. Light and refreshing to start your lunch.";
                 break;
             case "2":
-                this.lunchDish = "Mediterranean Hummus with Crudités - Creamy hummus flavored with olive oil, lemon juice, and tahini served with an assortment of colorful vegetables like baby carrots, cucumber slices, and bell pepper strips for dipping\n";
+                this.lunchDish = "Mediterranean Hummus with Crudités: Creamy hummus flavored with olive oil, lemon juice, and tahini served with an assortment of colorful vegetables like baby carrots, cucumber slices, and bell pepper strips for dipping.";
                 break;
             case "3":
-                this.lunchDish = "Roasted Edamame with Chili Flakes and Sea Salt - Edamame pods roasted until crispy and lightly seasoned with chili flakes and sea salt. A simple and flavorful snack that's perfect for sharing.\n";
+                this.lunchDish = "Roasted Edamame with Chili Flakes and Sea Salt: Edamame pods roasted until crispy and lightly seasoned with chili flakes and sea salt. A simple and flavorful snack that's perfect for sharing.";
                 break;
 
         
@@ -44,13 +44,13 @@ public class LunchBuilder extends MealBuilder{
     public void buildMainDish (String dish){
         switch (dish) {
             case "1":
-                this.lunchDish = this.lunchDish + "Lemon Garlic Shrimp with Zucchini Noodles-  Juicy shrimp sautéed in a fragrant lemon garlic sauce served over a bed of zucchini noodles. A healthy and flavorful combination perfect for a light lunch.";
+                this.lunchDish = this.lunchDish + "Lemon Garlic Shrimp with Zucchini Noodles:  Juicy shrimp sautéed in a fragrant lemon garlic sauce served over a bed of zucchini noodles. A healthy and flavorful combination perfect for a light lunch.";
                 break;
             case "2":
-                this.lunchDish =  this.lunchDish + "Chicken Caesar Wrap- Grilled chicken breast strips tossed in a light Caesar dressing with crisp romaine lettuce, Parmesan cheese, and crunchy croutons all wrapped up in a whole wheat tortilla. A classic and satisfying lunch option.";
+                this.lunchDish =  this.lunchDish + "Chicken Caesar Wrap: Grilled chicken breast strips tossed in a light Caesar dressing with crisp romaine lettuce, Parmesan cheese, and crunchy croutons all wrapped up in a whole wheat tortilla. A classic and satisfying lunch option.";
                 break;
             case "3":
-                this.lunchDish =  this.lunchDish + "Lentil Soup with a Crusty Roll** - A hearty and comforting soup simmered with lentils, vegetables, and herbs. Served with a crusty roll for dipping. A vegetarian option packed with protein and fiber.";
+                this.lunchDish =  this.lunchDish + "Lentil Soup with a Crusty Roll: A hearty and comforting soup simmered with lentils, vegetables, and herbs. Served with a crusty roll for dipping. A vegetarian option packed with protein and fiber.";
                 break;
         
             default:

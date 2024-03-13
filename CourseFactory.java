@@ -1,7 +1,6 @@
 import java.util.Observable;
 
 public abstract class CourseFactory extends Observable {
-    public abstract MealBuilder createMealBuilder(String CourseType);
     public abstract Beverage createBeverage(String type);
 
     public void setData(String CourseType, String Options, String BeverageType) {
