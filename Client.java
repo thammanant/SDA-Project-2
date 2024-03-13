@@ -112,8 +112,7 @@ public class Client {
             System.out.println("Invalid choice");
         }
 
-        Course set = store.orderCourse(course, courseType, options, beverageType);
-        System.out.println("Ethan ordered a " + set + "\n");
-
+        store.orderCourse(course, courseType, options, beverageType);
+        concreteFactory.setData(course, courseType, options, beverageType);
     }
 }

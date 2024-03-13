@@ -1,6 +1,6 @@
 public class Dinner extends Course{
     CourseFactory courseFactory;
-    String meal;
+    TheMeal meal;
 
     DinnerBuilder mealBuilder = new DinnerBuilder();
 
@@ -26,8 +26,7 @@ public class Dinner extends Course{
 
     void prepare(String courseType,String options, String beverageType) {
         constructMeal(courseType, options);
-        meal = String.valueOf(getMeal());
-        System.out.println("Preparing " + meal);
+        meal = getMeal();
         beverage = courseFactory.createBeverage(beverageType);
     }
 }
